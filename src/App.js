@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import GitHub from "./GitHub";
+import Nasa from "./Nasa";
 
 import './App.css';
 
@@ -18,9 +19,15 @@ class App extends Component {
               GitHub API
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/nasa">
+              NASA API
+            </NavLink>
+          </li>
         </ul>
         <Switch>
           <Route path="/github" component={GitHub} />
+          <Route path="/nasa" component={Nasa} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
