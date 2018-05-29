@@ -7,8 +7,7 @@ This is the 4th project for XTern Bootcamp, Session 1.
 1. Visit https://jdwhite88.github.io/api-party/ in your favorite internet browser that supports ES6 (not IE or Opera).
 
 ## TODO
-* Setup GitHub Pages for the website
-* Everything else
+* Everything
 
 ## Author
 * **Jacob White** - [GitHub](https://github.com/jdwhite88)
