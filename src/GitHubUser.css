@@ -1,0 +1,12 @@
+.GitHubUser {
+    margin-bottom: 16px;
+}
+
+.GitHubUser img {
+    height: 200px;
+    border-radius: 50%;
+}
+
+.GitHubUser h3 {
+    color: #999;
+}
