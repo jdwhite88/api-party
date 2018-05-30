@@ -1,9 +1,11 @@
-.Spotify .logo {
-    margin-top: 30px;
+.Spotify .logo img {
     max-height: 300px;
-
+    max-width: 500px;
+    width: 100%;
     /* Spotify guidelines */
     min-width: 70px;
+    /* Half the image width */
+    margin: 75px 75px;
 }
 
 .Spotify input {

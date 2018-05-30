@@ -16,17 +16,19 @@ class Spotify extends Component {
 
     handleSubmit = (ev) => {
         ev.preventDefault();
-        this.props.history.push(`/jdwhite88/spotify/${this.state.song}`);
+        this.props.history.push(`/api-party/spotify/${this.state.song}`);
     }
 
     render() {
         return(
             <div className="Spotify">
-                <img 
-                    src="spotify.png" 
-                    alt="Spotify"
-                    className="logo"
-                />
+                <div className="logo">
+                    <img 
+                        src="/Spotify_Logo_RGB_Green.png" 
+                        alt="Spotify"
+                        className="logo"
+                    />
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <input 
@@ -39,8 +41,8 @@ class Spotify extends Component {
                         <button type="submit">Look up Spotify song</button>
                     </div>
                 </form>
-                <Route path="/jdwhite88/spotify/:song" component={SpotifySong} />
-                <Route exact path="/jdwhite88/spotify" render={() => <h3>Please enter a song to search on Spotify</h3>} />
+                <Route path="/api-party/spotify/:song" component={SpotifySong} />
+                <Route exact path="/api-party/spotify" render={() => <h3>Please enter a song to search on Spotify</h3>} />
             </div>
         );
     }

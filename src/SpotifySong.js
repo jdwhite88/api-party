@@ -12,7 +12,7 @@ class SpotifySong extends Component {
     fetchSongData = (props) => {
         console.log("Fetching...");
         const BASE_URL = 'https://api.spotify.com/v1/search?';
-        const ACCESS_TOKEN = 'BQAoH85zxWmUjlpBsvAATIg-qUoyGvj8LdETzIYihOVF1_PCxlO20do8va5I3h7-R8DE4tXUAgNyrW6kcmBkzI4aU2XpP5QvoQrORcngGJZW_a7O8KWxmtd2w9QFj4xZgJfMS3iQ-R7upA';
+        const ACCESS_TOKEN = 'BQCVb5I377C5uGIz-nPmx_FFukGubl3zp84DriOv9AGm2Bg7iAA1Z4u9TrZOPwT8y8I45YP2c0a_rOi-NYsBNwr-2eDttQeCin5agp-jmHTp49dClNupRdwSynB9gn1G1BqaEqG7J8750A';
         const FETCH_URL = `${BASE_URL}q=track:${props.match.params.song}&type=track&limit=1&access_token=${ACCESS_TOKEN}`;
 
         fetch(FETCH_URL)

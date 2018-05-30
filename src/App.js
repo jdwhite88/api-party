@@ -16,19 +16,19 @@ class App extends Component {
         </div>
         <ul className="navLinks">
           <li>
-            <NavLink to="/jdwhite88/github">GitHub API</NavLink>
+            <NavLink to="/api-party/github">GitHub API</NavLink>
           </li>
           <li>
-            <NavLink to="/jdwhite88/nasa">NASA API</NavLink>
+            <NavLink to="/api-party/nasa">NASA API</NavLink>
           </li>
           <li>
-            <NavLink to="/jdwhite88/spotify">Spotify API</NavLink>
+            <NavLink to="/api-party/spotify">Spotify API</NavLink>
           </li>
         </ul>
         <Switch>
-          <Route path="/jdwhite88/github" component={GitHub} />
-          <Route path="/jdwhite88/nasa" component={Nasa} />
-          <Route path="/jdwhite88/spotify" component={Spotify} />
+          <Route path="/api-party/github" component={GitHub} />
+          <Route path="/api-party/nasa" component={Nasa} />
+          <Route path="/api-party/spotify" component={Spotify} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
