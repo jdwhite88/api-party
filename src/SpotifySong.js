@@ -36,6 +36,7 @@ class SpotifySong extends Component {
                         name: songJSON.name,
                         artist: songJSON.artists[0].name,
                         id: songJSON.id,
+                        uri: songJSON.uri,
                     };
                 }
                 else {
@@ -43,6 +44,7 @@ class SpotifySong extends Component {
                         name: song.match.params.rover,
                         artist: null,
                         id: null,
+                        uri: null,
                     };
                 }
                 this.setState( { song });
@@ -59,11 +61,13 @@ class SpotifySong extends Component {
     
     render() {
         const { song } = this.state;
+        const EMBED_URL = `https://open.spotify.com/embed?uri=${song.uri}`;
         return(
             <div className="SpotifySong">
                 <h3>Song: {song.name}</h3>
                 <h3>Artist: {song.artist}</h3>
                 <h3>Spotify ID: {song.id}</h3>
+                <iframe title={song.name} src={EMBED_URL} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         );
     }
