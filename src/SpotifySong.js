@@ -9,23 +9,12 @@ class SpotifySong extends Component {
 
         this.fetchSongData(props);
     }
-
-    // authorize = () => {
-    //     const BASE_URL = 'https://accounts.spotify.com/authorize?';
-    //     const CLIENT_ID = 'b645edbb22ab4f0e8c8b1c7ede41b55c';
-    //     const REDIRECT_URI = 'http://localhost:3000/spotify/callback/';
-    //     const FETCH_URL = `${BASE_URL}client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token`;
-    //     fetch(FETCH_URL)
-    //         .then(response => response.json())
-    //         .then(res => console.log(res));
-    // }
-
     fetchSongData = (props) => {
         console.log("Fetching...");
-        // this.authorize();
         const BASE_URL = 'https://api.spotify.com/v1/search?';
         const ACCESS_TOKEN = 'BQCTA1i5toLyLLCQlHXV-hGzyHIuhEFKbnBwGw2gl4s0YP2nAgxfewegow_4CWNI1vyh_rBAkXPuNTnIOWqP-2wS6mtFAjHH_k7D2pwrhkKpf_pJWKfVVit4vTeGT1wGFWGHEDNzIRWMpQ';
         const FETCH_URL = `${BASE_URL}q=track:${props.match.params.song}&type=track&limit=1&access_token=${ACCESS_TOKEN}`;
+
         fetch(FETCH_URL)
             .then(response => response.json())
             .then(data => {
@@ -42,7 +31,7 @@ class SpotifySong extends Component {
                 else {
                     song = {
                         name: song.match.params.rover,
-                        artist: null,
+                        artist: "",
                         id: null,
                         uri: null,
                     };
@@ -62,12 +51,17 @@ class SpotifySong extends Component {
     render() {
         const { song } = this.state;
         const EMBED_URL = `https://open.spotify.com/embed?uri=${song.uri}`;
+        const URL = `https://open.spotify.com/track/${song.id}`;
         return(
             <div className="SpotifySong">
                 <h3>Song: {song.name}</h3>
                 <h3>Artist: {song.artist}</h3>
-                <h3>Spotify ID: {song.id}</h3>
-                <iframe title={song.name} src={EMBED_URL} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div>
+                    <iframe title={song.name} src={EMBED_URL} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                {
+                    URL && <a href={URL} target="_blank">Open in Spotify</a>
+                }
             </div>
         );
     }
