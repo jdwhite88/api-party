@@ -16,7 +16,7 @@ This is the 4th project for XTern Bootcamp, Session 1.
 
 #### Known Bugs
 * OAuth Access token for Spotify must be generated server-side, not hard-coded client-side (expires)
-* Not all NASA rovers display info.
+* Not all NASA rovers display info
 * NASA API is implemented using a Demo Key, which is rate-limited (HTTP error 429). Use an API Key specific to the project instead
 
 ## Author
