@@ -17,7 +17,7 @@ class GitHub extends Component {
 
     handleSubmit = (ev) => {
         ev.preventDefault();
-        this.props.history.push(`/github/${this.state.username}`);
+        this.props.history.push(`/jdwhite88/github/${this.state.username}`);
     }
 
     render() {
@@ -40,8 +40,8 @@ class GitHub extends Component {
                         <button type="submit">Look up GitHub user</button>
                     </div>
                 </form>
-                <Route path="/github/:username" component={GitHubUser} />
-                <Route exact path="/github" render={() => <h3>Please enter a username to search on GitHub</h3>}  />
+                <Route path="/jdwhite88/github/:username" component={GitHubUser} />
+                <Route exact path="/jdwhite88/github" render={() => <h3>Please enter a username to search on GitHub</h3>}  />
             </div>
         );
     }

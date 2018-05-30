@@ -16,17 +16,17 @@ class Nasa extends Component {
                 <h2>Select a Mars rover</h2>
                 <ul className="navLinks">
                     <li>
-                        <NavLink to="/nasa/curiosity">Curiosity</NavLink>
+                        <NavLink to="/jdwhite88/nasa/curiosity">Curiosity</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/nasa/opportunity">Opportunity</NavLink>
+                        <NavLink to="/jdwhite88/nasa/opportunity">Opportunity</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/nasa/spirit">Spirit</NavLink>
+                        <NavLink to="/jdwhite88/nasa/spirit">Spirit</NavLink>
                     </li>
                 </ul>
-                <Route path="/nasa/:rover" component={RoverInfo} />
-                <Route exact path="/nasa" render={() => <h2>No rover selected.</h2>}  />
+                <Route path="/jdwhite88/nasa/:rover" component={RoverInfo} />
+                <Route exact path="/jdwhite88/nasa" render={() => <h2>No rover selected.</h2>}  />
             </div>
         )
     }

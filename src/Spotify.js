@@ -16,7 +16,7 @@ class Spotify extends Component {
 
     handleSubmit = (ev) => {
         ev.preventDefault();
-        this.props.history.push(`/spotify/${this.state.song}`);
+        this.props.history.push(`/jdwhite88/spotify/${this.state.song}`);
     }
 
     render() {
@@ -39,8 +39,8 @@ class Spotify extends Component {
                         <button type="submit">Look up Spotify song</button>
                     </div>
                 </form>
-                <Route path="/spotify/:song" component={SpotifySong} />
-                <Route exact path="/spotify" render={() => <h3>Please enter a song to search on Spotify</h3>} />
+                <Route path="/jdwhite88/spotify/:song" component={SpotifySong} />
+                <Route exact path="/jdwhite88/spotify" render={() => <h3>Please enter a song to search on Spotify</h3>} />
             </div>
         );
     }

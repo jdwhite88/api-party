@@ -15,7 +15,8 @@ This is the 4th project for XTern Bootcamp, Session 1.
 * Customize website's style
 
 #### Known Bugs
-* __Routing strips the "api-party" segment from the URL when accessed via GitHub Pages, breaking most of the functionality. In the meantime, host the webpage via localhost.__
+* __Routing strips the "api-party" segment from the URL when accessed via GitHub Pages, breaking most of the functionality. In the meantime, host the webpage via localhost.__ (Fixed?)
+* OAuth Access token for Spotify is temporary, and must be refreshed
 * NASA API is implemented using a Demo Key, which is now rate-limited (HTTP error 429). Use an API Key specific to the project instead
 
 ## Author
