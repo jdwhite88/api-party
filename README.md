@@ -15,7 +15,8 @@ This is the 4th project for XTern Bootcamp, Session 1.
 * Customize website's style
 
 #### Known Bugs
-* OAuth Access token for Spotify is temporary, and must be refreshed server-side
+* OAuth Access token for Spotify must be generated server-side, not hard-coded client-side (expires)
+* Not all NASA rovers display info.
 * NASA API is implemented using a Demo Key, which is rate-limited (HTTP error 429). Use an API Key specific to the project instead
 
 ## Author
@@ -29,5 +30,5 @@ This is the 4th project for XTern Bootcamp, Session 1.
 * [Spotify API](https://beta.developer.spotify.com/documentation/web-api/) - For searching and embedding a requested song on Spotify
 
 ## Acknowledgments
-* [TechPoint](https://techpoint.org/) - For hosting the [XTern Bootcamp](https://techpoint.org/xtern-bootcamp/), where this project was completed: [Source code](https://github.com/xtbc18s1/api-party/tree/afternoon) for in-class demo.
+* [TechPoint](https://techpoint.org/) - For hosting the [XTern Bootcamp](https://techpoint.org/xtern-bootcamp/), where this project was completed
 * [Fretless](http://www.fretless.com/) - Especially Davey & Dana, for providing instruction for Xtern Bootcamp. 
