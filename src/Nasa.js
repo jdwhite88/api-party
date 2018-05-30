@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom';
 
+import RoverInfo from './RoverInfo';
 import './Nasa.css';
 
 class Nasa extends Component {
@@ -11,6 +13,20 @@ class Nasa extends Component {
                     alt="NASA"
                     className="logo"
                 />
+                <h2>Select a Mars rover</h2>
+                <ul className="navLinks">
+                    <li>
+                        <NavLink to="/nasa/curiosity">Curiosity</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/nasa/opportunity">Opportunity</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/nasa/spirit">Spirit</NavLink>
+                    </li>
+                </ul>
+                <Route path="/nasa/:rover" component={RoverInfo} />
+                <Route exact path="/nasa" render={() => <h2>No rover selected.</h2>}  />
             </div>
         )
     }
